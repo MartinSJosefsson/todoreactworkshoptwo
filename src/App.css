@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/images/Background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s; 
+}
+
+#root {
+  height: 95%;
+  width: 100%;
+}
+
+.container {
+  padding: 1cm 10px;
+  min-height: 60vh;
+  max-width: 90%; 
+  border-radius: 15px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.container.light {
+  background-color: rgba(255, 255, 255, 0.9); 
+}
+
+.container.dark {
+  background-color: rgba(30, 30, 30, 0.9); 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
+}
+
+.container .row {
+  margin: 0; 
+}
