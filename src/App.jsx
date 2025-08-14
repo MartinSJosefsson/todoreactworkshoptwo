@@ -62,7 +62,7 @@ class App extends Component {
     return (
       <div className={`container ${this.state.theme}`}>
         <div className="d-flex justify-content-center align-items-center mb-4 position-relative">
-          <h1>Fast Food Menu</h1>
+          <h1>Ristorante Italiana del Monde</h1>
           <button className="btn btn-outline-secondary position-absolute end-0" onClick={this.toggleTheme}>
             <i className={`bi bi-${this.state.theme === 'light' ? 'moon' : 'sun'}-fill me-2`}></i>
             {this.state.theme === 'light' ? 'Dark' : 'Light'} Mode
