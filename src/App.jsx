@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css'; 
-import Menu from './components/Menu';
+import Burger from './components/Burger';
+import Pizza from './components/Pizza';
+import Fries from './components/Fries';
 import Order from './components/Order';
 
 class App extends Component {
@@ -62,14 +64,18 @@ class App extends Component {
     return (
       <div className={`container ${this.state.theme}`}>
         <div className="d-flex justify-content-center align-items-center mb-4 position-relative">
-          <h1>Ristorante Italiana del Monde</h1>
+          <h1>Fast Food Menu</h1>
           <button className="btn btn-outline-secondary position-absolute end-0" onClick={this.toggleTheme}>
             <i className={`bi bi-${this.state.theme === 'light' ? 'moon' : 'sun'}-fill me-2`}></i>
             {this.state.theme === 'light' ? 'Dark' : 'Light'} Mode
           </button>
         </div>
 
-        <Menu addToOrder={this.addToOrder} />
+        <div className="row">
+          <Burger addToOrder={this.addToOrder} />
+          <Pizza addToOrder={this.addToOrder} />
+          <Fries addToOrder={this.addToOrder} />
+        </div>
 
         <Order
           order={this.state.order}
